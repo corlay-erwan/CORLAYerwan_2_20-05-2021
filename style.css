@@ -1,4 +1,183 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+body{
+  font-family: Raleway, sans-serif;
+  max-width: 1024px;
+  margin: auto;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+
+/*HEBERGEMENT*/
+/*problème pour mettre les deux blocs côteà côte*/
+#hebergement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 56px;
+}
+
+.titre_hebergements_a_marseille {
+    margin: 0px;
+    font-size: large;
+    margin-bottom: 21px;
+}
+
+#hebergements_a_marseille {
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    border-radius: 20px;
+    padding: 44px 36px 44px 36px;
+    max-width: 805px;
+}
+
+.container_item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 60px;
+}
+
+.box_carte {
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 5px 5px 10px 5px;
+    background-color: white;
+    max-width: 236px;
+    margin-bottom: 28px;
+
+}
+
+.hebergement_image {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.photo_hebergement {
+    object-fit: cover;
+    width: 236px;
+    height: 112px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hebergement_contenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 16px;
+}
+
+.titre_contenu {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+a:active {
+      background-color: #FFCC66;
+  }
+
+
+
+.prix_contenu {
+    padding-bottom: 11px;
+}
+
+.hebergement_notation {
+    padding-bottom: 11px;
+    color: blue;
+}
+
+.hebergement_contenu h3,
+.hebergement_populaire_contenu h3 {
+    font-weight: bold;
+    font-style: normal;
+}
+
+.hebergement_montrer_plus {
+    font-weight: bold;
+}
+
+.fas.fa-star.grey-star {
+    color: grey;
+}
+
+/*Les plus populaires*/
+
+.titre_popularite {
+    display: flex;
+    flex-direction: row;
+}
+
+.titre_les_plus_populaires {
+    font-size: large;
+    margin-bottom: 25px;
+}
+
+.fa-chart-line {
+    color: black;
+}
+
+#container_hebergements_populaires {
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 45px 38px 31px 45px;
+    max-width: 345px;
+}
+
+.hebergement_les_plus_populaires {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.box_populaire_carte {
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    background-color: white;
+    padding: 6px 58px 6px 6px;
+    max-width: 284px;
+    max-height: 135px;
+    margin-bottom: 29px;
+}
+
+.photo_populaire {
+    width: 132px;
+    height: 132px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.hebergement_populaire_contenu {
+    padding: 7px 0px 7px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre_populaire_contenu {
+    padding-bottom: 14px;
+}
+
+.prix_populaire_contenu {
+    padding-bottom: 30px;
+}
+
+.hebergement_notation_populaire {
+    max-width: 94px;
+    max-height: 15px;
+}
+
 #Activités_à_Marseille {
   background-color: white;
   width: 1024px;
@@ -45,7 +224,7 @@
 
 img {
   width: 100%;
-  height: 100%;
+  height: 100%; 
 }
 
 .photo_activite1,
@@ -58,24 +237,32 @@ img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 1em;
+  margin: auto;
 }
 .photo_activite11 {
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 .photo_activite44 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .photo_activite22 {
-}
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;}
 
 .photo_activite33 {
-}
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;}
 
 .photo_activite55 {
-}
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;}
 
 .photo_activite66 {
-}
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;}
 
 /* le style de mon footer*/
 footer ul {
@@ -83,11 +270,26 @@ footer ul {
   margin-left: 0;
   padding-left: 0;
 }
-
+footer li{
+margin-bottom: 8px;
+}
+footer h2{
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+footer a:hover{
+  text-decoration: underline;
+}
 footer {
-  width: 80%;
+  background-color: #F2F2F2;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: small;
+  font-size: 11px;
+  padding: 20px;
+}
+.bloc-footer{
+  flex: 1;
 }
