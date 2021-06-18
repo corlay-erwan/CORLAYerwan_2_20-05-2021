@@ -80,8 +80,8 @@ a {
 }
 
 .titre_contenu {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-size: 12px;
 }
 
@@ -103,7 +103,10 @@ a:active {
 .hebergement_populaire_contenu h3 {
   font-weight: bold;
   font-style: normal;
+  padding: 0mm;
+  margin: 0;
 }
+
 
 .hebergement_montrer_plus {
   font-weight: bold;
@@ -200,15 +203,10 @@ a:active {
 .image_grand {
   border-radius: 20px 20px 0 0;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-size
-  height: 400px;
-}
+  background-size}
 .activite2et3,
-.activite5et6{
-   
-  height: 300 px;
-
-}
+.activite5et6{ 
+  height: 300 px}
 .activite_moyen {
   border-radius: 20px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
