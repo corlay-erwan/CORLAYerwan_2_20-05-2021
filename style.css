@@ -11,8 +11,198 @@ a {
 }
 
 /*HEBERGEMENT*/
-/*problème pour mettre les deux blocs côteà côte*/
-#hebergement {
+/*HEBERGEMENT*/
+/* Le conteneur de mes activités, sous le H2 */
+#Hébergements{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 550px;
+  width: 900px;
+  margin-bottom: 50px;
+  background-color: blue;
+  border-radius: 20px;
+}
+.Hébergements-bloc {
+  height: 50%;
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-direction: column;
+  border-radius: 20px;
+  border: solid 2px white;
+  margin: 10px;
+  background-color: brown;
+}
+.hébergements-image{
+height: 100%;
+background-position: center;
+background-size: cover;
+border-radius: 20px 20px 0 0;}
+
+#Hébergements-1-image{
+  background-image: url('assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
+}
+#Hébergements-2-image{
+  background-image: url('assets/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
+}
+#Hébergements-3-image{
+  background-image: url('assets/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg');
+}
+#Hébergements-4-image{
+  background-image: url('assets/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
+}
+#Hébergements-5-image{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+}
+#Hébergements-6-image{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
+}
+
+
+/*ACTIVITES*/
+
+/* Le conteneur de mes activités, sous le H2 */
+#activites {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 350px;
+  margin-bottom: 50px;
+}
+
+/* le conteneur d'une ou plusieurs activités */
+.activite-bloc {
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+/* Une activté (carte) */
+.activite {
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-sizing: content-box;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* règle disant : toutes les activites-bloc, sauf la première, ont une marge gauche */
+#activites .activite-bloc:not(:first-child) {
+  margin-left: 5px;
+}
+
+/* règle disant : toutes les activites-bloc, sauf la dernière, ont une marge droite */
+#activites .activite-bloc:not(:last-child) {
+  margin-right: 5px;
+}
+
+/* le ration d'une carte activité moyenne, par rapport à son parent en colonne */
+.activite-moyen {
+  flex: 1.5;
+}
+
+/* le ration d'une carte activité petite, par rapport à son parent en colonne */
+.activite-petit {
+  flex: 1;
+}
+
+/* règle disant : toutes les activites, sauf la dernière, dans blocs moyen-petits ont une marge en bas */
+.activite-moyen-petit .activite:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* les images d emes activités */
+.activite-image {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* les titres de mes activités */
+.titre_activite{
+  padding: 15px;
+  font-weight:bolder;
+}
+
+/* les sources des images pour la version PC */
+#activite-1-img {
+  background-image: url('assets/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg');
+}
+
+#activite-2-img {
+  background-image: url('assets/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg');
+}
+
+#activite-3-img {
+  background-image: url('assets/images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg');
+}
+
+#activite-4-img {
+  background-image: url('assets/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg');
+}
+
+#activite-5-img {
+  background-image: url('assets/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg');
+}
+
+#activite-6-img {
+  background-image: url('assets/images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg');
+}
+
+/* FOOTER */
+footer ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+footer li {
+  margin-bottom: 8px;
+}
+
+footer h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 11px;
+  padding: 20px;
+}
+
+.bloc-footer {
+  flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* #hebergement {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -116,7 +306,6 @@ a:active {
   color: grey;
 }
 
-/*Les plus populaires*/
 
 .titre_popularite {
   display: flex;
@@ -175,108 +364,4 @@ a:active {
 .prix_populaire_contenu {
   padding-bottom: 30px;
 }
-
-/*ACIVITES*/
-#activites {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 30px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  width: 50%;
-  
-
-}
-.activite_grand {
-  border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  box-sizing: content-box;
-  padding: 0;
-  margin: 20px;
-  height: 370px;
-  width: 200PX;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 25%;
-}
-.image_grand {
-  border-radius: 20px 20px 0 0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-size}
-.activite2et3,
-.activite5et6{ 
-  height: 300 px}
-.activite_moyen {
-  border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  box-sizing: content-box;
-  padding: 0;
-  margin: 20px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 25%;
-}
-.image_moyen {
-  border-radius: 20px 20px 0 0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: 200px;
-  height: 150px;
-}
-
-.activite_petit {
-  border-radius: 20px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  box-sizing: content-box;
-  padding: 0px;
-  padding: 0;
-  margin: 20px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 25%;
-  
-}
-.image_petit {
-  border-radius: 20px 20px 0 0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: 200px;
-  height: 80px;
-  
-}
-.titre_activite{
-  font-size: x-small;
-  padding: 9px;
-  font-weight:bolder;
-}
-
-/* le style de mon footer*/
-footer ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-footer li {
-  margin-bottom: 8px;
-}
-footer h2 {
-  margin: 0;
-  font-weight: bold;
-  font-size: 12px;
-}
-footer a:hover {
-  text-decoration: underline;
-}
-footer {
-  background-color: #f2f2f2;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 11px;
-  padding: 20px;
-}
-.bloc-footer {
-  flex: 1;
-}
+*/
