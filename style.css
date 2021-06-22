@@ -2,8 +2,7 @@
 
 body {
   font-family: Raleway, sans-serif;
-  max-width: 1024px;
-  margin: auto;
+  max-width: 1024px
 }
 a {
   text-decoration: none;
@@ -12,75 +11,129 @@ a {
 
 /*HEBERGEMENT*/
 /*HEBERGEMENT*/
-#Hébergements-marseille{
+#Hebergements-marseille{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 500px;
-  max-width: 1200px;
+  width: 100%;
   margin-bottom: 50px;
-  background-color: blue;
   border-radius: 20px;
 }
-#Hébergements{
+#Hebergements{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   height: 500px;
-  max-width: 600px;
+  width: 600px;
   margin-bottom: 50px;
-  background-color: blue;
+  background-color:#f2f2f2;
   border-radius: 20px;
 }
-.Hébergements-bloc {
-  height: 50%;
+.titre-et-hebergement{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 500px ;
+}
+.hebergements{
   width: 200px;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.Hebergements-bloc {
+  height: 150px;
+  width: 130px;
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
   border-radius: 20px;
-  border: solid 2px white;
+  border: solid 6px white;
   margin: 10px;
-  background-color: brown;
-}
-.hébergements-image{
-height: 100%;
+  background-color:white}
+
+.hebergements-image{
+height: 70px;
+width: 100%;
 background-position: center;
 background-size: cover;
-border-radius: 20px 20px 0 0;}
-.hébergementsPP{
-  height: 50%;
-  width: 200px;
+border-radius: 20px 20px 0 0;
+margin: O;
+}
+.prix{
+  font-size: smaller;
+}
+/* je n'arrive pas à mettre le margin à 0*/
+.titre_hebergement{
+  margin: 0;
+}
+/* je n'arrive pas à mettre ce bloc à la même hauteur que hébérgements à marseille"*/
+#hebergement_les_plus_populaires{
+  background-color: #f2f2f2;
+  margin: 20px;
+  border-radius: 20px;
+  height: 100%;
+  width: 370px;
+  padding:5px;
 }
 
-#Hébergements-1-image{
+.HebergementsPP-bloc{
+ border-radius: 20px;
+ width: 300px;
+ height: 50px;
+}
+.hebergementsPP{
+  display: flex;
+  flex-direction: row;
+}
+.detailspp{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.titre_hebergements{
+  font-size: small;
+}
+
+#hebergements-1-img{
   background-image: url('assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
 }
-#Hébergements-2-image{
+#hebergements-2-img{
   background-image: url('assets/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg');
 }
-#Hébergements-3-image{
+#hebergements-3-img{
   background-image: url('assets/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg');
 }
-#Hébergements-4-image{
+#hebergements-4-img{
   background-image: url('assets/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg');
 }
-#Hébergements-5-image{
+#hebergements-5-img{
+  background-image: url('assets/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg');
+}
+#hebergements-6-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
-#Hébergements-6-image{
-  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
-}
-#Hébergements-7-image{
+#hebergements-7-img{
   background-image: url('assets/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
 }
-#Hébergements-8-image{
+#hebergements-8-img{
   background-image: url('assets/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
 }
-}
-#Hébergements-9-image{
+
+#hebergements-9-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
+}
+.fas.fa-star{
+  color: blue;
+}
+.fas.fa-star.grey-star{
+  color: rgb(235, 232, 232);
 }
 
 /*ACTIVITES*/
