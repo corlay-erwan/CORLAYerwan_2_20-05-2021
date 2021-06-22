@@ -12,13 +12,22 @@ a {
 
 /*HEBERGEMENT*/
 /*HEBERGEMENT*/
-/* Le conteneur de mes activités, sous le H2 */
+#Hébergements-marseille{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 500px;
+  max-width: 1200px;
+  margin-bottom: 50px;
+  background-color: blue;
+  border-radius: 20px;
+}
 #Hébergements{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 550px;
-  width: 900px;
+  height: 500px;
+  max-width: 600px;
   margin-bottom: 50px;
   background-color: blue;
   border-radius: 20px;
@@ -40,6 +49,10 @@ height: 100%;
 background-position: center;
 background-size: cover;
 border-radius: 20px 20px 0 0;}
+.hébergementsPP{
+  height: 50%;
+  width: 200px;
+}
 
 #Hébergements-1-image{
   background-image: url('assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg');
@@ -59,7 +72,16 @@ border-radius: 20px 20px 0 0;}
 #Hébergements-6-image{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
 }
-
+#Hébergements-7-image{
+  background-image: url('assets/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
+}
+#Hébergements-8-image{
+  background-image: url('assets/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
+}
+}
+#Hébergements-9-image{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
+}
 
 /*ACTIVITES*/
 
