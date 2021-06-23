@@ -2,16 +2,147 @@
 
 body {
   font-family: Raleway, sans-serif;
-  max-width: 1024px
+  max-width: 1024px;
+  margin:auto ;
 }
 a {
   text-decoration: none;
   color: unset;
 }
+/*header2*/
+.header_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.titre_principal {
+  display: flex;
+  flex-direction: column;
+}
+.titre_trouvez {
+  margin-bottom: 3px;
+}
+/*Barre de recherche*/
+.gps-logo {
+  position: relative;
+  height: 40px;
+  background-color: #F2F2F2;
+  width: 54px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+.fa-map-marker-alt {
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#search-section {
+  display: flex;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: flex-start;
+}
+.rechercher {
+  background-color: #0065FC;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 30%;
+  height: 40px;
+  border: none;
+  color: white;
+  outline: none;
+  font-weight: bold;
+}
+.rechercher_loupe {
+  display: none;
+}
+/*Filtres*/
+
+#filtres-section {
+  display: flex;
+  align-items: center;
+  margin: 32px 0px 41px 0px;
+}
+
+
+.filtre-bouton {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-left: 25px;
+  flex-wrap: wrap;
+
+}
+.circle-icon-filter {
+  width: 50px;
+  height: 50px;
+  background-color: #DEEBFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+
+.filtre {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filtre p {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #d9d9d9;
+  padding: 0px 25px 0px 65px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.titre_filtres p {
+  font-weight: bold;
+}
+
+.fa-money-bill-wave,
+.fa-male,
+.fa-heart,
+.fa-dog {
+  color: #0065FC;
+  font-size: 1.5em;
+}
+h3 {
+  font-size: small;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.nombre_logements {
+  margin: 0px 0px 35px 17px;
+}
+
+.filtre-bouton:hover {
+  text-decoration: underline;
+  color: #0065FC;
+}
+
+.fas.fa-info-circle {
+  color: black;
+}
+
 
 /*HEBERGEMENT*/
 /*HEBERGEMENT*/
-#Hebergements-marseille{
+#hebergements-marseille{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,7 +151,12 @@ a {
   margin-bottom: 50px;
   border-radius: 20px;
 }
-#Hebergements{
+.titre_section{
+  font-size:x-small;
+  padding: 10px;
+  justify-content:stretch;
+}
+#hebergements{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -30,14 +166,20 @@ a {
   background-color:#f2f2f2;
   border-radius: 20px;
 }
+.etoiles{
+  display: flex;
+  flex-direction: row;
+}
 .titre-et-hebergement{
   display: flex;
   flex-direction: column;
   width: 600px;
-  height: 500px ;
+  height: 100% ;
 }
 .hebergements{
   width: 200px;
+  display: flex;
+  flex-direction: column;
 }
 .box{
   display: flex;
@@ -46,7 +188,7 @@ a {
   width: 100%;
   height: 100%;
 }
-.Hebergements-bloc {
+.hebergements-bloc {
   height: 150px;
   width: 130px;
   display: flex;
@@ -77,42 +219,43 @@ margin: O;
 }
 .hebergementspp-image{
   height: 110px;
-  width: 160px;
+  width: 130px;
   border-radius: 20px 0 0 20px;
   margin: 4px;
 }
 .prix{
   font-size: smaller;
 }
-/* je n'arrive pas à mettre le margin à 0*/
-.titre_hebergement{
-  margin: 0;
-}
+
 /* je n'arrive pas à mettre ce bloc à la même hauteur que hébérgements à marseille"*/
 #hebergement_les_plus_populaires{
   background-color: #f2f2f2;
-  margin: 20px;
+  margin-left: 20px;
   border-radius: 20px;
-  height: 100%;
-  width: 370px;
-  padding:5px;
+  height: 100%
 }
 
-.HebergementsPP-bloc{
+.hebergementsPP-bloc{
  border-radius: 20px;
  width: 300px;
  height: 50px;
+}
+.titre_section {
+  margin: 0px;
+  font-size: large;
+  margin-bottom: 21px;
 }
 
 .detailspp{
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
   margin-left: 10px;
 }
-
+/* comment rendre plus gras les lettres*/
 .titre_hebergements{
   font-size: small;
+  font-weight: bolder;
 }
 
 #hebergements-1-img{
@@ -133,16 +276,21 @@ margin: O;
 #hebergements-6-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
+#hebergementspp-7-img{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+}
+#hebergementspp-8-img{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+}
+#hebergementspp-9-img{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+}
 
 .fas.fa-star{
-  color: blue;
+  color:#0065FC;
 }
 .fas.fa-star.grey-star{
-  color: rgb(235, 232, 232);
-}
-.main h3{
-  font-weight: bold;
-  
+  color: rgb(235, 232, 232)
 }
 
 /*ACTIVITES*/
