@@ -9,6 +9,8 @@ a {
   text-decoration: none;
   color: unset;
 }
+
+
 /*header2*/
 .header_2 {
   display: flex;
@@ -146,6 +148,8 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
   height: 500px;
   width: 100%;
   margin-bottom: 50px;
@@ -175,6 +179,14 @@ h3 {
   flex-direction: column;
   width: 600px;
   height: 100% ;
+  flex: 2 1 auto;
+}
+#hebergement_les_plus_populaires{
+  background-color: #f2f2f2;
+  margin-left: 20px;
+  border-radius: 20px;
+  height: 100%;
+  flex: 1 1 auto;
 }
 .hebergements{
   width: 200px;
@@ -227,13 +239,7 @@ margin: O;
   font-size: smaller;
 }
 
-/* je n'arrive pas à mettre ce bloc à la même hauteur que hébérgements à marseille"*/
-#hebergement_les_plus_populaires{
-  background-color: #f2f2f2;
-  margin-left: 20px;
-  border-radius: 20px;
-  height: 100%
-}
+
 
 .hebergementsPP-bloc{
  border-radius: 20px;
@@ -276,13 +282,13 @@ margin: O;
 #hebergements-6-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
-#hebergementspp-7-img{
+#hebergements-7-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
-#hebergementspp-8-img{
+#hebergements-8-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
-#hebergementspp-9-img{
+#hebergements-9-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
 
