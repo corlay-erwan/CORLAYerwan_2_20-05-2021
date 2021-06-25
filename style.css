@@ -23,7 +23,7 @@ a {
   flex-direction: column;
 }
 .titre_trouvez {
-  margin-bottom: 3px;
+  margin-bottom: 14px;
 }
 /*Barre de recherche*/
 .gps-logo {
@@ -92,7 +92,7 @@ a {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: 1px;
 }
 
@@ -188,6 +188,7 @@ h3 {
   height: 100%;
   flex: 1 1 auto;
 }
+
 .hebergements{
   width: 200px;
   display: flex;
@@ -228,18 +229,20 @@ margin: O;
   background-color: white;
   height: 120px;
   margin: 10px;
+  width: 80%;
+  margin: 20px;
+  border: 5px solid white ;
 }
 .hebergementspp-image{
-  height: 110px;
-  width: 130px;
-  border-radius: 20px 0 0 20px;
-  margin: 4px;
+  height: 100%;
+  width: 25%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px 0 0 20px
 }
 .prix{
   font-size: smaller;
 }
-
-
 
 .hebergementsPP-bloc{
  border-radius: 20px;
@@ -255,6 +258,7 @@ margin: O;
 .detailspp{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   width: 50%;
   margin-left: 10px;
 }
@@ -282,14 +286,14 @@ margin: O;
 #hebergements-6-img{
   background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
 }
-#hebergements-7-img{
-  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+#hebergementspp-7-img{
+  background-image: url('assets/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg');
 }
-#hebergements-8-img{
-  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+#hebergementspp-8-img{
+  background-image: url('assets/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg');
 }
-#hebergements-9-img{
-  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg');
+#hebergementspp-9-img{
+  background-image: url('assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg');
 }
 
 .fas.fa-star{
