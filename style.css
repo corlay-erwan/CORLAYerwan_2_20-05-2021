@@ -9,7 +9,87 @@ a {
   text-decoration: none;
   color: unset;
 }
+/* Header*/
+#logo{
+  width: 100%;
+  display: flex;
+ flex-direction: row;
+ align-items: stretch;
+ justify-content: space-around;
+}
 
+h1 {
+  font-size: large;
+}
+p{
+  margin: 0;
+}
+header {
+  display: flex;
+  flex-direction: row;
+align-content: flex-end;
+  align-items: center;
+
+  padding-top: 10px;
+}
+img{
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.headernavlink {
+  padding-top: 30px;
+}
+
+/*Navigation*/
+
+.fas {
+  color: #0065fc;
+}
+
+.navigation {
+  display: flex;
+}
+
+nav a {
+  font-size: 0.9em;
+  color: black;
+  padding-top: 3px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-style: normal;
+}
+
+a:hover {
+  text-decoration: #0065FC;
+  color: #0065FC;
+}
+
+header nav a {
+  margin-left: 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  height: 10px;
+}
+
+.hebergements-activites a:hover {
+  border-top: 3px solid #0065FC;
+}
+
+.headersignup {
+  color: #0065FC;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/*Titre principal*/
 
 /*header2*/
 .header_2 {
@@ -22,9 +102,7 @@ a {
   display: flex;
   flex-direction: column;
 }
-.titre_trouvez {
-  margin-bottom: 14px;
-}
+
 /*Barre de recherche*/
 .gps-logo {
   position: relative;
@@ -104,6 +182,7 @@ a {
 .filtre p {
   height: 50px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   border: 2px solid #d9d9d9;
   padding: 0px 25px 0px 65px;
