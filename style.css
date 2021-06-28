@@ -16,6 +16,7 @@ a {
  flex-direction: row;
  align-items: stretch;
  justify-content: space-around;
+ margin: 20px;
 }
 
 h1 {
@@ -125,7 +126,9 @@ header nav {
   height: 40px;
   margin-top: 15px;
 }
-
+.type-search{
+  border:1px solid #F2F2F2
+}
 .search-bar {
   display: flex;
   justify-content: flex-start;
@@ -226,8 +229,7 @@ h3 {
 #hebergements-marseille{
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-wrap: wrap; 
   justify-content: space-around;
   height: 500px;
   width: 100%;
