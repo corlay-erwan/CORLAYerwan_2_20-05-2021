@@ -1,36 +1,83 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 body {
-  font-family: Raleway, sans-serif;
-  max-width: 1024px;
-  margin: auto
-}
-
-a {
-  text-decoration: none;
-  color: unset;
-  font-style: normal;
-}
-
-a:hover {
-  text-decoration: #0065fc;
-  color: #0065fc;
-}
-
-p {
   margin: 0;
 }
 
-.fas {
-  color: #0065fc;
+* {
+  box-sizing: border-box;
+}
+.titre_enplein{
+  margin:0rem
+}
+
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+}
+
+ul:hover li.active:not(:hover){
+  border-top-color: transparent;
+  color: black;
+}
+
+li:hover {
+  color: blue;
+  border-top-color: blue;
+}
+
+li {
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-top: 5px solid transparent;
+}
+
+li.active {
+  color: blue;
+  border-top-color: blue;
+}
+
+@media screen and (max-width: 400px) {
+  
+  li.register {
+    order: 0;
+  }
+  
+  li.link {
+    order: 1;
+    width: 50%;
+    margin: 0;
+    text-align: center;
+    border-bottom: 3px solid lightgray;
+  }
+
+  li.active {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid blue;
+  }
 }
 
 /* Header*/
+
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 80px;
+  margin: 30px;
 }
 
 #logo {
@@ -45,6 +92,7 @@ header {
 
 header nav {
   min-width: 33%;
+  display: flex;
 }
 
 header nav ul {
@@ -85,10 +133,10 @@ header nav a {
   border-top: 3px solid #0065fc;
 }
 
-.headersignup {
-  color: #0065fc;
-  font-weight: bold;
-  margin-right: 10px;
+#inscription {
+  padding-top: 32px;
+  padding-right: 2%;
+  font-size: 14px;
 }
 
 /*Titre principal*/
@@ -126,8 +174,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size:3px;
-
+  font-size: 3px;
 }
 #search-section {
   display: flex;
@@ -177,7 +224,6 @@ h1 {
   padding-right: 8px;
 }
 
-
 .filtre {
   display: flex;
   flex-wrap: wrap;
@@ -185,7 +231,7 @@ h1 {
 
 .filtre span {
   font-weight: bolder;
-  font-size:1em;
+  font-size: 1em;
 }
 
 #titre_filtres {
@@ -204,8 +250,6 @@ h1 {
   display: flex;
   justify-content: center;
 }
-
-
 
 .fas.fa-info {
   height: 2rem;
@@ -233,29 +277,35 @@ h1 {
 
 .filtre-bouton:hover {
   text-decoration: underline;
-  color: blue
+  color: blue;
 }
 
 /*HEBERGEMENT*/
+
+main{
+  margin: 30px;
+}
 #hebergements-marseille {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content:space-evenly;
   width: 100%;
   margin-bottom: 50px;
-  height: 550px;
+  height: 600px;
   border-radius: 20px;
+  box-sizing: content-box;
 }
 
 #hebergements {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
   height: 100%;
-
   background-color: #f2f2f2;
-  border-radius: 20px;
+  border-radius: 20px; 
   padding: 20px;
-  flex: 5
+  flex: 5;
 }
 
 .etoiles {
@@ -270,48 +320,57 @@ h1 {
   margin-left: 20px;
   border-radius: 20px;
   height: 100%;
-  padding: 30px;
-  flex: 2
+  padding: 20px;
+  flex: 2;
 }
 
 .fas.fa-chart-line {
   color: black;
 }
 
-.hebergements {
-  display: flex;
-  flex-direction: column;
-}
 .box {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  flex: 1;
+  justify-content:space-around;
+  box-sizing: border-box;
+  width: 100%;
+  height: 430px;
+  margin: 0;
 }
+
 .box1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content:center;
   width: 100%;
 }
 
 .hebergements-bloc {
-  height: 180px;
-  width: 180px;
+  width: 25%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-wrap:wrap;
+  flex-direction:column;
   border-radius: 20px;
   padding: 3px;
   margin: 10px;
-  background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  position: relative;
+  text-decoration: none;
+  color: black;
+}
+.photo_chambre{
+  height: 100px;
+  width: 100%;
+  border-radius: 20PX 20px 0 0;
+}
+.photo_chambrepp{
+  height: 100%;
+  width: 130px;
+  border-radius: 20px 0 0 20px;
 }
 
 .hebergements-image {
-  height: 100%;
   width: 180px;
   background-position: center;
   background-size: cover;
@@ -325,27 +384,29 @@ h1 {
   border-radius: 20px;
   background-color: white;
   height: 130px;
-  width: 100%;
+  width: 90%;
   padding: 3px;
-  margin-bottom: 20px;
+  margin-top: 35px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .hebergementspp-image {
-  height: 100%;
-  width: 35%;
+  width: 10px;
   background-position: center;
   background-size: cover;
   border-radius: 20px 0 0 20px;
 }
 .prix {
   font-size: smaller;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   margin-left: 10px;
+  width: 100%;
 }
 .prixpp {
   font-size: smaller;
-  padding-bottom: 10px;
-  margin-bottom: auto;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  width: 100%;
 }
 
 .hebergementsPP-bloc {
@@ -356,59 +417,46 @@ h1 {
 .titre_section {
   font-size: large;
   font-weight: 900;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  box-sizing:border-box;
 }
 
 .detailspp {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   width: 50%;
   margin-left: 5px;
 }
-.notationpp{
+
+.notationpp {
   margin-bottom: 5px;
 }
+
 .titre_hebergements {
   font-size: small;
-  font-weight: bolder;
-  padding-bottom: 10px;
-  margin-left: 5px;
+  font-weight: 1000;
+  padding-top: 5px;
+  margin-left: 10px;
+  width: 100%;
+  box-sizing: content-box;
 }
 
-#hebergements-1-img {
-  background-image: url("assets/images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
-}
-#hebergements-2-img {
-  background-image: url("assets/images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
-}
-#hebergements-3-img {
-  background-image: url("assets/images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
-}
-#hebergements-4-img {
-  background-image: url("assets/images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
-}
-#hebergements-5-img {
-  background-image: url("assets/images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
-}
-#hebergements-6-img {
-  background-image: url("assets/images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
-}
-#hebergementspp-7-img {
-  background-image: url("assets/images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
-}
-#hebergementspp-8-img {
-  background-image: url("assets/images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
-}
-#hebergementspp-9-img {
-  background-image: url("assets/images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
+.affiche {
+  font-size: small;
+  font-weight: 1000;
+  padding-top: 30px;
+  margin-left: 40px;
+  width: 100%;
+  box-sizing: content-box;
 }
 
 .fas.fa-star {
   color: #0065fc;
 }
+
 .fas.fa-star.grey-star {
   color: rgb(235, 232, 232);
 }
