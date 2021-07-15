@@ -6,10 +6,9 @@ body {
 * {
   box-sizing: border-box;
 }
-.titre_enplein{
-  margin:0rem
+.titre_enplein {
+  margin: 0;
 }
-
 
 ul {
   margin: 0;
@@ -27,7 +26,7 @@ ul {
   color: blue;
 }
 
-ul:hover li.active:not(:hover){
+ul:hover li.active:not(:hover) {
   border-top-color: transparent;
   color: black;
 }
@@ -49,12 +48,11 @@ li.active {
   border-top-color: blue;
 }
 
-@media screen and (max-width: 400px) {
-  
+@media screen and (max-width: 550px) {
   li.register {
     order: 0;
   }
-  
+
   li.link {
     order: 1;
     width: 50%;
@@ -67,18 +65,22 @@ li.active {
     border-top: 3px solid transparent;
     border-bottom: 3px solid blue;
   }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Header*/
-
 
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 80px;
-  margin: 30px;
+  height: 60px;
 }
+
 
 #logo {
   display: flex;
@@ -143,7 +145,7 @@ header nav a {
 
 h1 {
   font-size: large;
-  margin-top: 10px;
+margin:0;
 }
 /*Titre principal*/
 
@@ -249,7 +251,9 @@ h1 {
   align-items: center;
   display: flex;
   justify-content: center;
+  transform: translateX(-2px);
 }
+
 
 .fas.fa-info {
   height: 2rem;
@@ -262,10 +266,22 @@ h1 {
   align-items: center;
   justify-content: center;
   margin-right: 1rem;
+  color: blue;
 }
+@media screen and (max-width: 550px) {
+  #filtres-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+  }
+  .filtre-bouton {
+    margin-bottom: 10px;
+  }
+}
+
 .nombre_logements {
   font-size: small;
-  font-style: italic;
   font-weight: normal;
   margin: 0px 0px 35px 17px;
   display: flex;
@@ -282,18 +298,19 @@ h1 {
 
 /*HEBERGEMENT*/
 
-main{
+main {
   margin: 30px;
 }
 #hebergements-marseille {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 100%;
   margin-bottom: 50px;
   height: 600px;
   border-radius: 20px;
   box-sizing: content-box;
+  color: black;
 }
 
 #hebergements {
@@ -303,7 +320,7 @@ main{
   box-sizing: border-box;
   height: 100%;
   background-color: #f2f2f2;
-  border-radius: 20px; 
+  border-radius: 20px;
   padding: 20px;
   flex: 5;
 }
@@ -332,7 +349,7 @@ main{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-around;
   box-sizing: border-box;
   width: 100%;
   height: 430px;
@@ -343,15 +360,15 @@ main{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   width: 100%;
 }
 
 .hebergements-bloc {
   width: 25%;
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:column;
+  flex-wrap: wrap;
+  flex-direction: column;
   border-radius: 20px;
   padding: 3px;
   margin: 10px;
@@ -359,12 +376,12 @@ main{
   text-decoration: none;
   color: black;
 }
-.photo_chambre{
+.photo_chambre {
   height: 100px;
   width: 100%;
-  border-radius: 20PX 20px 0 0;
+  border-radius: 20px 20px 0 0;
 }
-.photo_chambrepp{
+.photo_chambrepp {
   height: 100%;
   width: 130px;
   border-radius: 20px 0 0 20px;
@@ -405,8 +422,11 @@ main{
   font-size: smaller;
   padding-bottom: 5px;
   margin-left: 10px;
-  margin-bottom: 50px;
+  margin-top: 5px;
+  margin-bottom: 45px;
   width: 100%;
+  color: black;
+  text-decoration: none
 }
 
 .hebergementsPP-bloc {
@@ -420,13 +440,13 @@ main{
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .detailspp {
   display: flex;
   flex-direction: column;
-
+  color: black;
   width: 50%;
   margin-left: 5px;
 }
@@ -441,7 +461,7 @@ main{
   padding-top: 5px;
   margin-left: 10px;
   width: 100%;
-  box-sizing: content-box;
+  text-decoration: none
 }
 
 .affiche {
@@ -459,6 +479,12 @@ main{
 
 .fas.fa-star.grey-star {
   color: rgb(235, 232, 232);
+}
+@media screen and (max-width: 827px) {
+  #hebergements-marseille {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*ACTIVITES*/
@@ -528,6 +554,8 @@ main{
 .titre_activite {
   padding: 15px;
   font-weight: bolder;
+  color: black;
+  text-decoration: none
 }
 
 /* les sources des images pour la version PC */
@@ -572,10 +600,11 @@ footer h2 {
   font-size: 12px;
 }
 
-footer a:hover {
-  text-decoration: underline;
-}
 
+
+footer a{
+  color: black;
+}
 footer {
   background-color: #f2f2f2;
   width: 100%;
