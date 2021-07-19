@@ -1,6 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
+
 body {
   margin: 0;
+  font-family: 'raleway';
+  font-weight: 300;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 
 * {
@@ -26,24 +34,24 @@ ul {
   color: blue;
 }
 
-ul:hover li.active:not(:hover) {
+header ul:hover li.active:not(:hover) {
   border-top-color: transparent;
   color: black;
 }
 
-li:hover {
+header li:hover {
   color: blue;
   border-top-color: blue;
 }
 
-li {
+header li {
   padding-top: 25px;
   padding-left: 30px;
   padding-right: 30px;
   border-top: 5px solid transparent;
 }
 
-li.active {
+header li.active {
   color: blue;
   border-top-color: blue;
 }
@@ -307,12 +315,13 @@ main {
   justify-content: space-evenly;
   width: 100%;
   margin-bottom: 50px;
-  height: 600px;
+
   border-radius: 20px;
   box-sizing: content-box;
   color: black;
 }
 
+  
 #hebergements {
   display: flex;
   flex-direction: column;
@@ -352,7 +361,6 @@ main {
   justify-content: space-around;
   box-sizing: border-box;
   width: 100%;
-  height: 430px;
   margin: 0;
 }
 
@@ -373,18 +381,19 @@ main {
   padding: 3px;
   margin: 10px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  text-decoration: none;
   color: black;
 }
 .photo_chambre {
   height: 100px;
   width: 100%;
   border-radius: 20px 20px 0 0;
+  object-fit: cover;
 }
 .photo_chambrepp {
   height: 100%;
   width: 130px;
   border-radius: 20px 0 0 20px;
+  object-fit: cover;
 }
 
 .hebergements-image {
@@ -426,7 +435,6 @@ main {
   margin-bottom: 45px;
   width: 100%;
   color: black;
-  text-decoration: none
 }
 
 .hebergementsPP-bloc {
@@ -461,7 +469,6 @@ main {
   padding-top: 5px;
   margin-left: 10px;
   width: 100%;
-  text-decoration: none
 }
 
 .affiche {
@@ -483,7 +490,7 @@ main {
 @media screen and (max-width: 827px) {
   #hebergements-marseille {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -545,8 +552,9 @@ main {
 /* les images de mes activités */
 .activite-image {
   height: 100%;
-  background-position: center;
-  background-size: cover;
+  width: 100%;
+ object-fit: cover;
+ object-position: center;
   border-radius: 20px 20px 0 0;
 }
 
@@ -555,7 +563,6 @@ main {
   padding: 15px;
   font-weight: bolder;
   color: black;
-  text-decoration: none
 }
 
 /* les sources des images pour la version PC */
@@ -588,6 +595,9 @@ footer ul {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 footer li {
@@ -595,12 +605,14 @@ footer li {
 }
 
 footer h2 {
-  margin: 0;
-  font-weight: bold;
-  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 15px;
 }
 
-
+footer a:hover {
+  text-decoration: underline;
+}
 
 footer a{
   color: black;
@@ -617,4 +629,6 @@ footer {
 
 .bloc-footer {
   flex: 1;
+  text-align:left;
+  
 }
