@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
-
 body {
   margin: 0;
-  font-family: 'raleway';
+  font-family: "raleway";
   font-weight: 300;
 }
-a{
+a {
   text-decoration: none;
   color: black;
 }
@@ -89,7 +88,6 @@ header {
   height: 60px;
 }
 
-
 #logo {
   display: flex;
   justify-content: center;
@@ -153,7 +151,7 @@ header nav a {
 
 h1 {
   font-size: large;
-margin:0;
+  margin: 0;
 }
 /*Titre principal*/
 
@@ -262,7 +260,6 @@ margin:0;
   transform: translateX(-2px);
 }
 
-
 .fas.fa-info {
   height: 2rem;
   width: 2rem;
@@ -321,7 +318,6 @@ main {
   color: black;
 }
 
-  
 #hebergements {
   display: flex;
   flex-direction: column;
@@ -496,7 +492,6 @@ main {
 
 /*ACTIVITES*/
 
-/* Le conteneur de mes activités, sous le H2 */
 #activites {
   display: flex;
   flex-direction: row;
@@ -505,7 +500,6 @@ main {
   margin-bottom: 50px;
 }
 
-/* le conteneur d'une ou plusieurs activités */
 .activite-bloc {
   height: 100%;
   display: flex;
@@ -513,15 +507,88 @@ main {
   flex-direction: column;
 }
 
-/* Une activté (carte) */
 .activite {
   height: 100%;
   border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  box-sizing: content-box;
   padding: 0;
   display: flex;
   flex-direction: column;
+}
+.activite23 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  flex: 1;
+}
+
+.activite2 {
+  height: 40%;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.activite-image2 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 20px 20px 0 0;
+
+}
+.activite3 {
+  height: 30%;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.activite-image3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  flex-direction: column;
+  border-radius: 20px 20px 0 0;
+}
+
+.activite55 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.activite5 {
+  height: 40%;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 0;
+}
+.activite-image5{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.titre_activite {
+  padding: 15px;
+  font-weight: 900;
+  color: black;
 }
 
 /* règle disant : toutes les activites-bloc, sauf la première, ont une marge gauche */
@@ -553,42 +620,12 @@ main {
 .activite-image {
   height: 100%;
   width: 100%;
- object-fit: cover;
- object-position: center;
+  object-fit: cover;
+  object-position: center;
   border-radius: 20px 20px 0 0;
 }
 
-/* les titres de mes activités */
-.titre_activite {
-  padding: 15px;
-  font-weight: bolder;
-  color: black;
-}
 
-/* les sources des images pour la version PC */
-#activite-1-img {
-  background-image: url("assets/images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
-}
-
-#activite-2-img {
-  background-image: url("assets/images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
-}
-
-#activite-3-img {
-  background-image: url("assets/images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
-}
-
-#activite-4-img {
-  background-image: url("assets/images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
-}
-
-#activite-5-img {
-  background-image: url("assets/images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg");
-}
-
-#activite-6-img {
-  background-image: url("assets/images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
-}
 
 /* FOOTER */
 footer ul {
@@ -614,7 +651,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer a{
+footer a {
   color: black;
 }
 footer {
@@ -629,6 +666,5 @@ footer {
 
 .bloc-footer {
   flex: 1;
-  text-align:left;
-  
+  text-align: left;
 }
