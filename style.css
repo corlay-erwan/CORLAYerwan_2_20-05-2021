@@ -273,7 +273,7 @@ h1 {
   margin-right: 1rem;
   color: blue;
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   #filtres-section {
     display: flex;
     flex-direction: column;
@@ -312,7 +312,6 @@ main {
   justify-content: space-evenly;
   width: 100%;
   margin-bottom: 50px;
-
   border-radius: 20px;
   box-sizing: content-box;
   color: black;
@@ -369,7 +368,7 @@ main {
 }
 
 .hebergements-bloc {
-  width: 25%;
+  max-width: 25%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -387,18 +386,12 @@ main {
 }
 .photo_chambrepp {
   height: 100%;
-  width: 130px;
+  max-width: 100px;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
 }
 
-.hebergements-image {
-  width: 180px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 20px 20px 0 0;
-  margin-bottom: 10px;
-}
+
 .hebergementsPP {
   display: flex;
   flex-direction: row;
@@ -406,13 +399,13 @@ main {
   border-radius: 20px;
   background-color: white;
   height: 130px;
-  width: 90%;
+  max-width: 100%;
   padding: 3px;
   margin-top: 35px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .hebergementspp-image {
-  width: 10px;
+  max-width: 30%;
   background-position: center;
   background-size: cover;
   border-radius: 20px 0 0 20px;
@@ -451,7 +444,8 @@ main {
   display: flex;
   flex-direction: column;
   color: black;
-  width: 50%;
+  flex-wrap: wrap;
+  max-width: 50%;
   margin-left: 5px;
 }
 
@@ -483,10 +477,27 @@ main {
 .fas.fa-star.grey-star {
   color: rgb(235, 232, 232);
 }
-@media screen and (max-width: 827px) {
+@media screen and (max-width: 1232px) {
   #hebergements-marseille {
     display: flex;
     flex-direction: column-reverse;
+  }
+  #hebergement_les_plus-populaire{
+    margin-bottom: 30px;
+  }
+  #hebergement {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  .box1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .hebergements-bloc {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
   }
 }
 
@@ -514,13 +525,22 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
+  margin: 15px;
+}
+
+.activite-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px 20px 0 0;
 }
 .activite23 {
   height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-around;
   flex: 1;
 }
 
@@ -540,7 +560,6 @@ main {
   object-position: center;
   display: block;
   border-radius: 20px 20px 0 0;
-
 }
 .activite3 {
   height: 30%;
@@ -577,7 +596,7 @@ main {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 0;
 }
-.activite-image5{
+.activite-image5 {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -591,41 +610,17 @@ main {
   color: black;
 }
 
-/* règle disant : toutes les activites-bloc, sauf la première, ont une marge gauche */
-#activites .activite-bloc:not(:first-child) {
-  margin-left: 5px;
+
+
+
+
+
+@media screen and (max-width: 1232px) {
+  #activite-marseille {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-/* règle disant : toutes les activites-bloc, sauf la dernière, ont une marge droite */
-#activites .activite-bloc:not(:last-child) {
-  margin-right: 5px;
-}
-
-/* le ration d'une carte activité moyenne, par rapport à son parent en colonne */
-.activite-moyen {
-  flex: 1.5;
-}
-
-/* le ration d'une carte activité petite, par rapport à son parent en colonne */
-.activite-petit {
-  flex: 1;
-}
-
-/* règle disant : toutes les activites, sauf la dernière, dans blocs moyen-petits ont une marge en bas */
-.activite-moyen-petit .activite:not(:last-child) {
-  margin-bottom: 10px;
-}
-
-/* les images de mes activités */
-.activite-image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 20px 20px 0 0;
-}
-
-
 
 /* FOOTER */
 footer ul {
@@ -635,6 +630,7 @@ footer ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 }
 
 footer li {
@@ -667,4 +663,17 @@ footer {
 .bloc-footer {
   flex: 1;
   text-align: left;
+  max-width: 30%;
+}
+@media screen and (max-width: 700px) {
+  .bloc-footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer{
+    width: auto;
+  }
+  .body{
+    width: auto;
+  }
 }
