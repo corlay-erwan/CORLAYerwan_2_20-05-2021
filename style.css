@@ -16,50 +16,60 @@ a {
 .titre_enplein {
   margin: 0;
 }
-
-ul {
+body {
   margin: 0;
-  padding: 0;
-  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul.flex {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+}
+header.li{
+  padding: 30px;
 }
 
-.bold {
-  font-weight: bold;
+}
+li.register{
+  color: #0065fc;
 }
 
-.blue {
-  color: blue;
+li.imgContainer {
+  padding: 10px
+  height: 70px;
+  flex-grow: 1;
 }
 
-header ul:hover li.active:not(:hover) {
-  border-top-color: transparent;
-  color: black;
+li.imgContainer>img {
+  height: 100%;
 }
 
-header li:hover {
-  color: blue;
-  border-top-color: blue;
+header.li:not(.imgContainer) {
+  display: block;
+  margin: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  border-top: 3px solid transparent;
 }
 
-header li {
-  padding-top: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-top: 5px solid transparent;
+li.active {
+  border-top: 3px solid blue;
 }
 
-header li.active {
-  color: blue;
-  border-top-color: blue;
-}
-
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 400px) {
+  
   li.register {
     order: 0;
   }
-
+  
   li.link {
     order: 1;
     width: 50%;
@@ -72,80 +82,9 @@ header li.active {
     border-top: 3px solid transparent;
     border-bottom: 3px solid blue;
   }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
-/* Header*/
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 60px;
-}
-
-#logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#logo img {
-  height: 45px;
-}
-
-header nav {
-  min-width: 33%;
-  display: flex;
-}
-
-header nav ul {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: flex;
-  list-style: none;
-  flex-direction: row;
-}
-
-header li {
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  padding: 0px 25px;
-  align-items: center;
-}
-
-#heberg-nav-link {
-  position: relative;
-}
-
-#heberg-nav-link-border {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 3px;
-  background-color: #0065fc;
-}
-
-header nav a {
-  font-size: 0.9em;
-  flex: 1;
-}
-
-.hebergements-activites a:hover {
-  border-top: 3px solid #0065fc;
-}
-
-#inscription {
-  padding-top: 32px;
-  padding-right: 2%;
-  font-size: 14px;
-}
 
 /*Titre principal*/
 
@@ -315,6 +254,7 @@ main {
   border-radius: 20px;
   box-sizing: content-box;
   color: black;
+  align-items: stretch;
 }
 
 #hebergements {
@@ -322,7 +262,6 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   box-sizing: border-box;
-  height: 100%;
   background-color: #f2f2f2;
   border-radius: 20px;
   padding: 20px;
@@ -340,7 +279,6 @@ main {
   background-color: #f2f2f2;
   margin-left: 20px;
   border-radius: 20px;
-  height: 100%;
   padding: 20px;
   flex: 2;
 }
@@ -351,33 +289,27 @@ main {
 
 .box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   box-sizing: border-box;
   width: 100%;
   margin: 0;
 }
 
-.box1 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
 .hebergements-bloc {
-  max-width: 25%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   border-radius: 20px;
   padding: 3px;
   margin: 10px;
+  min-width: 200px;
+  max-width: 250px;
+  width: 100%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  color: black;
 }
+
 .photo_chambre {
   height: 100px;
   width: 100%;
@@ -386,11 +318,10 @@ main {
 }
 .photo_chambrepp {
   height: 100%;
-  max-width: 100px;
+  width: 100px;
   border-radius: 20px 0 0 20px;
   object-fit: cover;
 }
-
 
 .hebergementsPP {
   display: flex;
@@ -477,13 +408,14 @@ main {
 .fas.fa-star.grey-star {
   color: rgb(235, 232, 232);
 }
-@media screen and (max-width: 1232px) {
+@media screen and (max-width: 1066px) {
   #hebergements-marseille {
     display: flex;
     flex-direction: column-reverse;
   }
-  #hebergement_les_plus-populaire{
-    margin-bottom: 30px;
+  #hebergement_les_plus_populaires {
+    background-color: #f2f2f2;
+    margin-left: 0;
   }
   #hebergement {
     display: flex;
@@ -493,6 +425,7 @@ main {
   .box1 {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .hebergements-bloc {
     display: flex;
@@ -504,104 +437,53 @@ main {
 /*ACTIVITES*/
 
 #activites {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: 350px;
+  display: grid;
+  column-gap: 30px;
+  grid-template-areas:
+    "large1 small1 large2 small3"
+    "large1 small1 large2 empty1"
+    "large1 empty2 large2 small4"
+    "large1 small2 large2 small4";
+  grid-template-rows: 165px 45px 45px 165px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 50px;
 }
 
-.activite-bloc {
-  height: 100%;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+.activite-large-1 {
+  grid-area: large1;
+}
+.activite-small-1 {
+  grid-area: small1;
+}
+.activite-small-2 {
+  grid-area: small2;
+}
+.activite-large-2 {
+  grid-area: large2;
+}
+.activite-small-3 {
+  grid-area: small3;
+}
+.activite-small-4 {
+  grid-area: small4;
 }
 
 .activite {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   border-radius: 20px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  margin: 15px;
 }
 
 .activite-image {
   height: 100%;
   width: 100%;
+  max-height: calc(100% - 50px);
   object-fit: cover;
   object-position: center;
   border-radius: 20px 20px 0 0;
-}
-.activite23 {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex: 1;
-}
-
-.activite2 {
-  height: 40%;
-  border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.activite-image2 {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 20px 20px 0 0;
-}
-.activite3 {
-  height: 30%;
-  border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-.activite-image3 {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  object-fit: cover;
-  flex-direction: column;
-  border-radius: 20px 20px 0 0;
-}
-
-.activite55 {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  flex: 1;
-}
-
-.activite5 {
-  height: 40%;
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 0;
-}
-.activite-image5 {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 20px 20px 0 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 .titre_activite {
@@ -610,15 +492,23 @@ main {
   color: black;
 }
 
-
-
-
-
-
 @media screen and (max-width: 1232px) {
-  #activite-marseille {
-    display: flex;
-    flex-direction: column;
+  #activites {
+    column-gap: 0;
+    row-gap: 20px;
+    grid-template-areas:
+      "large1"
+      "small1"
+      "small2"
+      "large2"
+      "small3"
+      "small4";
+    grid-auto-rows: 300px;
+    grid-template-rows: initial;
+    grid-template-columns: initial;
+  }
+  .activite-image {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   }
 }
 
@@ -630,7 +520,7 @@ footer ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
+  text-align: start;
 }
 
 footer li {
@@ -641,6 +531,7 @@ footer h2 {
   margin-bottom: 20px;
   font-weight: 900;
   font-size: 15px;
+
 }
 
 footer a:hover {
@@ -662,18 +553,30 @@ footer {
 
 .bloc-footer {
   flex: 1;
-  text-align: left;
+  text-align: start;
   max-width: 30%;
 }
 @media screen and (max-width: 700px) {
   .bloc-footer {
     display: flex;
     flex-direction: column;
+    width: 300px;
   }
-  .footer{
+  footer {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+  }
+  .body {
     width: auto;
   }
-  .body{
-    width: auto;
+  footer a{
+    font-size: large;
+  }
+  footer h2{
+    font-size: xx-large;
+    width: 300px;
   }
 }
