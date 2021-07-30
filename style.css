@@ -33,22 +33,23 @@ ul.flex {
   padding: 0px;
   list-style: none;
 }
-header.li{
+header ul li{
   padding: 30px;
 }
 
 }
-li.register{
+header li.register{
   color: #0065fc;
+  padding: 30px;
 }
 
-li.imgContainer {
+header li.imgContainer {
   padding: 10px
   height: 70px;
   flex-grow: 1;
 }
 
-li.imgContainer>img {
+header li.imgContainer>img {
   height: 100%;
 }
 
@@ -60,10 +61,12 @@ header.li:not(.imgContainer) {
   border-top: 3px solid transparent;
 }
 
-li.active {
+header li.active {
   border-top: 3px solid blue;
 }
-
+header ul li.register a{
+  color: #0065fc;
+}
 @media screen and (max-width: 400px) {
   
   li.register {
@@ -560,7 +563,7 @@ footer {
   .bloc-footer {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 200px
   }
   footer {
     width: auto;
