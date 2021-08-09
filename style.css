@@ -81,10 +81,11 @@ header ul li.register a{
     border-bottom: 3px solid lightgray;
   }
 
-  li.active {
+  header li.active {
     border-top: 3px solid transparent;
     border-bottom: 3px solid blue;
   }
+
 }
 
 
